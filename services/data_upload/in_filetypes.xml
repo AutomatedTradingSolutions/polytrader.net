@@ -1,0 +1,49 @@
+<filetypes>
+  <filetypename id="1" class="tohlcv">
+    <filetype>CSV Text</filetype>
+    <filetypedesc>One or more records comprising dt,o,h,l,c,v with an optional header\n</filetypedesc>
+    <basedir>ohlc/</basedir>
+    <indir>in/</indir>
+    <wipdir>processing/</wipdir>
+    <errdir>error/</errdir>
+    <donedir>processed/</donedir>
+    <fields>
+      <f1>timestamp</f1>
+      <f2>open</f2>
+      <f3>high</f3>
+      <f4>low</f4>
+      <f5>close</f5>
+      <f6>volume</f6>
+    </fields>
+  </filetypename>
+  <filetypename id="2" class="tohlc">
+    <filetype>CSV Text</filetype>
+    <filetypedesc>One or more records comprising dt,o,h,l,c with an optional header\n</filetypedesc>
+    <basedir>ohlc/</basedir>
+    <indir>in/</indir>
+    <wipdir>processing/</wipdir>
+    <errdir>error/</errdir>
+    <donedir>processed/</donedir>
+    <fields>
+      <f1>timestamp</f1>
+      <f2>open</f2>
+      <f3>high</f3>
+      <f4>low</f4>
+      <f5>close</f5>
+    </fields>
+  </filetypename>
+  <filetypename id="3" class="tick">
+    <filetype>CSV Text</filetype>
+    <filetypedesc>One or more records comprising dt,o,c with an optional header\n</filetypedesc>
+    <basedir>tick/</basedir>
+    <indir>in/</indir>
+    <wipdir>processing/</wipdir>
+    <errdir>error/</errdir>
+    <donedir>processed/</donedir>
+    <fields>
+      <f1>timestamp</f1>
+      <f2>open</f2>
+      <f3>close</f3>
+    </fields>
+  </filetypename>
+</filetypes>
