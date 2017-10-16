@@ -1,0 +1,10 @@
+DELIMITER ;
+
+SHOW WARNINGS;
+
+DROP DATABASE IF EXISTS _HELPER;
+
+-- db for all internal helper objects
+CREATE DATABASE IF NOT EXISTS _HELPER;
+
+CALL REFDATA.AddDataSchema('_HELPER');
