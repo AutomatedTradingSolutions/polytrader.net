@@ -1,0 +1,10 @@
+DELIMITER ;
+
+SHOW WARNINGS;
+
+DROP DATABASE IF EXISTS NEWS;
+
+-- db for all instrument sensitive news data
+CREATE DATABASE IF NOT EXISTS NEWS;
+
+CALL REFDATA.AddDataSchema('NEWS');
