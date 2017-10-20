@@ -25,5 +25,11 @@ class GetDatabaseInstance:
       raise ValueError('Got {actual} record(s) but expected {expected}'.format(actual=len(result_), expected=recordsExpected))
     return [ class_(row_) for row_ in result_ ]
 
-  def Insert():
+  def Insert(self):
+    pass
+
+  def Update(self):
+    pass
+
+  def Delete(self):
     pass
