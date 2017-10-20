@@ -202,6 +202,7 @@ class DataObjectMemberAttributes:
 # base class for all application specific data types
 class DataObject:
   _classMembers = {}
+  _dbMethods = {}
 
   @classmethod
   def GetClassMembers(class_):
@@ -229,6 +230,13 @@ class DataObject:
   @classmethod
   def AddClassMemberInstance(class_, dataObjectMember):
     class_.GetClassMembers().append(dataObjectMember)
+
+  @classmethod
+  def AddCRUDMethod(class_, crud_, methodName):
+    class_._dbMethods[crud_] = methodName
+
+  def GetDbMethod(self, method_):
+    return self._dbMethods[method_]
 
   @classmethod
   def GetInstance(class_, *args_, **kwargs_):
