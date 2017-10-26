@@ -18,8 +18,8 @@ class GetDatabaseInstance:
   def __init__(self, db_):
     self._db = db_
 
-  def Select(self, class_, procName, filter_, recordsExpected = None):
-    connection_ = self._db.GetConnection('ro')
+  def Select(self, class_, procName, filter_, connectionName = 'select', recordsExpected = None):
+    connection_ = self._db.GetConnection(connectionName)
     result_ = self._db.CallProcedure(connection_, procName, filter_)
     if recordsExpected != None and len(result_) != recordsExpected:
       raise ValueError('Got {actual} record(s) but expected {expected}'.format(actual=len(result_), expected=recordsExpected))
